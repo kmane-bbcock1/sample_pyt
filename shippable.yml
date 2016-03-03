@@ -16,4 +16,4 @@ python:
 build:
   ci:
     - python --version 
-    - git clone git@bitbucket.org:shiphitchcock6/sample_node_ui
+    - git clone git@bitbucket.org:shiphitchcock6/sample_pyt
