@@ -12,12 +12,23 @@ python:
   #- ppy3
 
 build:
+  pre_ci:
+    - docker build -t=shippabledocker/pipelinebbtest .
+
+  pre_ci_boot:
+    image_name: shippabledocker/pipelinebbtest
+    image_tag: latest
+    pull: false
+    
   ci:
-    - python --version 
-  #  - git clone git@bitbucket.org:shihitchcock6/sample_node_ui
-    
-  on_success:
-    - echo "success"
-    
-  on_failure:
-    - echo "failure"
+    - python --version  
+   # - ps -eax
+   # - ls -al 
+
+  post_ci:
+    - docker push shippabledocker/pipelinebbtest
+
+integrations:
+  hub:
+    - integrationName: ship-docker
+      type: docker
