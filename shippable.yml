@@ -7,14 +7,14 @@ python:
   #- 3.2
   #- 3.3
   - 3.4
-  - 3.5
+ # - 3.5
   #- pypy  
   #- ppy3
 
 build:
   ci:
     - python --version 
-    - git clone git@bitbucket.org:shihitchcock6/sample_node_ui
+  #  - git clone git@bitbucket.org:shihitchcock6/sample_node_ui
     
   on_success:
     - echo "success"
