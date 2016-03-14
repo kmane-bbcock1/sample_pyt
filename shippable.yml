@@ -32,7 +32,8 @@ build:
    # - ls -al 
 
   post_ci:
-    - docker push shippabledocker/pipelinebbtest
+    #- docker push shippabledocker/pipelinebbtest
+    - docker push shippabledocker/pipelinebbtest:$BRANCH.$BUILD_NUMBER
 
 integrations:
   hub:
