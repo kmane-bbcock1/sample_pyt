@@ -3,20 +3,23 @@ language: python
 # Version number
 python:
   #- 2.6
- # - 2.7
-  - 3.2
-  - 3.3
+  #- 2.7
+  #- 3.2
+  #- 3.3
   #- 3.4
   #- 3.5
-  - pypy  
-  #- ppy3
+  #- pypy  
+  - ppy3
 
+services:
+  - postgres
+  
 build:
  # pre_ci:
  #   - docker build -t=shippabledocker/pipelinebbtest .
 
   pre_ci_boot:
-    image_name: drydock/u14pytpls
+    image_name: drydock/u14pytall
     image_tag: prod
     pull: true
     
