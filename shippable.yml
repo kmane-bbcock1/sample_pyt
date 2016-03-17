@@ -14,7 +14,7 @@ python:
 build:
   ci:
     - python --version 
-    - git clone git@bitbucket.org:shihitchcock6/sample_node_ui
+    #- git clone git@bitbucket.org:shihitchcock6/sample_node_ui
     
   on_success:
     - echo "success"
