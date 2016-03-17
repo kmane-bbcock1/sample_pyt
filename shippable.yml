@@ -3,13 +3,13 @@ language: python
 # Version number
 python:
   #- 2.6
-  #- 2.7
+  - 2.7
   #- 3.2
   #- 3.3
   #- 3.4
   #- 3.5
-  - pypy  
-  - ppy3
+  #- pypy  
+  #- ppy3
 
 services:
   - postgres
@@ -25,15 +25,15 @@ build:
     
   ci:
     - python --version  
+    - ps -eax
+    - ls -al
   
   on_success:
     - echo "success"
     
   on_failure:
     - echo "failure"
-   # - ps -eax
-   # - ls -al 
-
+ 
   post_ci:
     - docker build -t=shippabledocker/pipelinebbtest:$BRANCH.$BUILD_NUMBER .
     - docker push shippabledocker/pipelinebbtest:$BRANCH.$BUILD_NUMBER
