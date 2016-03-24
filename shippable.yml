@@ -4,12 +4,17 @@ language: python
 python:
   #- 2.6
   #- 2.7
-  #- 3.2
+  - 3.2
   #- 3.3
   - 3.4
   - 3.5
   #- pypy  
   #- ppy3
+  
+matrix:
+  include:
+    - python: 3.2
+      env: tt@!=rr
 
 build:
   ci:
@@ -20,4 +25,5 @@ build:
     - echo "success"
     
   on_failure:
-    - echo "failure"
+    - echo "failure" 
+
