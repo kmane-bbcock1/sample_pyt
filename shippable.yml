@@ -20,10 +20,15 @@ build:
   ci:
     - python --version 
     #- git clone git@bitbucket.org:shihitchcock6/sample_node_ui
+  pre_ci_boot:
+      image_name: drydock/u12pyt  #shippabledocker/shiphitchcock1_testsamplenode
+      image_tag: prod
+      pull: false
+  #  options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
     
   on_success:
     - echo "success"
        
   on_failure:
     - echo "failure" 
-#testing project pause option
+    
