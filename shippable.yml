@@ -30,7 +30,7 @@ build:
     - echo "success"
     
   on_failure:
-    - echo "failure"
+    - echo "failure"   
  
   post_ci:
     - docker build -t=shippabledocker/pipelinebbtest:$BRANCH.$BUILD_NUMBER .
