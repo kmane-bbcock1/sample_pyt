@@ -11,8 +11,8 @@ python:
  # - pypy  
   #- ppy3
 
-#services:
-  #- postgres
+services:
+  - postgres
   
 build:
  # pre_ci:
