@@ -23,7 +23,7 @@ build:
   pre_ci_boot:
       image_name: shippable/minv2  #shippabledocker/shiphitchcock1_testsamplenode
       image_tag: latest
-      pull: false
+      pull: true
   #  options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
     
   on_success:
