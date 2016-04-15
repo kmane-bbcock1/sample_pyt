@@ -13,6 +13,10 @@ python:
   - pypy
   - ppy3
   
+env:
+  - TOO=FOO
+  - TEST=BETA
+  
 services:
   - mysql
   - postgres
