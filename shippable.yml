@@ -33,8 +33,8 @@ build:
     - echo "failure"   
  
   post_ci:
-    - docker build -t=shiphitchcock1/pipeline_pyt_bb:$BRANCH.$BUILD_NUMBER .
-    - docker push shiphitchcock1/pipeline_pyt_bb:$BRANCH.$BUILD_NUMBER
+    - docker build -t=shiphitchcock1/sample_python:$BRANCH.$BUILD_NUMBER .
+    - docker push shiphitchcock1/sample_python:$BRANCH.$BUILD_NUMBER
 
 integrations:
   hub:
