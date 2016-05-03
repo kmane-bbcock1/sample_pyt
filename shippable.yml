@@ -6,8 +6,8 @@ python:
   - 2.7
  # - 3.2
   #- 3.3
-  - 3.4
-  - 3.5
+  #- 3.4
+  #- 3.5
  # - pypy  
   #- ppy3
 
@@ -19,7 +19,7 @@ build:
  #   - docker build -t=shippabledocker/pipelinebbtest .
 
   pre_ci_boot:
-    image_name: drydock/u14pytall
+    image_name: drydock/u14pyt
     image_tag: prod
     pull: true
     
@@ -33,10 +33,10 @@ build:
     - echo "failure"   
  
   post_ci:
-    - docker build -t=shippabledocker/pipelinebbtest:$BRANCH.$BUILD_NUMBER .
-    - docker push shippabledocker/pipelinebbtest:$BRANCH.$BUILD_NUMBER
+    - docker build -t=shiphitchcock1/pipeline_pyt_bb:$BRANCH.$BUILD_NUMBER .
+    - docker push shiphitchcock1/pipeline_pyt_bb:$BRANCH.$BUILD_NUMBER
 
 integrations:
   hub:
-    - integrationName: ship-docker      
+    - integrationName: shiphitchcock1-hub 
       type: docker
